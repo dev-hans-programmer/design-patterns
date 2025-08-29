@@ -1,5 +1,15 @@
 from typing import Self
 
+"""
+Singleton ensures that only one instance of a class is created in the entire 
+application, and that same instance is used everywhere.
+
+Use cases:
+1. Db connection
+2. Logger
+3. Config settings etc
+"""
+
 
 class Singleton:
     _instance: Self | None = None
