@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 """
+Behavioral:
 It is used when we have multiple options, and we have to choose one 
 dynamically at runtime without changing the code of the client
 

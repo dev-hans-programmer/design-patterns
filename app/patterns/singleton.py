@@ -1,6 +1,7 @@
 from typing import Self
 
 """
+Creational:
 Singleton ensures that only one instance of a class is created in the entire 
 application, and that same instance is used everywhere.
 

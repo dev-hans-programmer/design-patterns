@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum, auto
 
 """
+Creational:
 Factory Pattern provides a way to create objects without exposing the creation 
 logic to the client.
 Instead of calling a class constructor directly, you use a factory method that 
