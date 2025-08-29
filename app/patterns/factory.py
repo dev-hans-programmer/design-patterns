@@ -38,13 +38,17 @@ class Box(Shape):
 
 class ShapeFactory:
     def create_shape(self, shape_type: ShapeType):
-        if shape_type == ShapeType.CIRCLE:
-            return Circle()
-        elif shape_type == ShapeType.BOX:
-            return Box()
+        shapes = {ShapeType.CIRCLE: Circle, ShapeType.BOX: Box}
+        # if shape_type == ShapeType.CIRCLE:
+        #     return Circle()
+        # elif shape_type == ShapeType.BOX:
+        #     return Box()
+        if shape_type not in shapes:
+            raise ValueError('Unsupported shape')
+        return shapes[shape_type]()
 
 
 def test_factory():
     factory = ShapeFactory()
-    shape = factory.create_shape(ShapeType.CIRCLE)
+    shape = factory.create_shape(ShapeType.BOX)
     shape.draw()
