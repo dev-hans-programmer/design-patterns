@@ -1,2 +1,2 @@
 run:
-	uv run app/main.py
+	uv run -m app.main
