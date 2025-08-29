@@ -42,3 +42,9 @@ class ShapeFactory:
             return Circle()
         elif shape_type == ShapeType.BOX:
             return Box()
+
+
+def test_factory():
+    factory = ShapeFactory()
+    shape = factory.create_shape(ShapeType.CIRCLE)
+    shape.draw()

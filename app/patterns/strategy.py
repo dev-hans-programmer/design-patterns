@@ -41,3 +41,12 @@ class PaymentProcessor:
 
     def pay(self):
         self._strategy.pay()
+
+
+def test_strategy():
+    payment_processor = PaymentProcessor(CreditCardPayment())
+    payment_processor.pay()
+
+    # pay using paypal
+    payment_processor.set_strategy(PaypalPayment())
+    payment_processor.pay()

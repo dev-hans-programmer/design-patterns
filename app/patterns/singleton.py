@@ -25,3 +25,9 @@ class Singleton:
 class Logger(Singleton):
     def __init__(self) -> None:
         print('Creating Logger')
+
+
+def test_singleton():
+    logger1 = Logger()
+    logger2 = Logger()
+    print(logger1 is logger2)
